@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Title</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<!-- navbar -->
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">LED</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars" style="font-size:24px;"></i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+</ul>
+
+<div class="row container">
+    <div class="col s12 m12 l6">
+        <div class="card">
+            <div class="card-content black-text">
+                <i class="right edit fa fa-edit"></i>
+                <span class="card-title">All LED's</span>
+                <!-- slider -->
+                <form action="#">
+                    <p class="range-field">
+                        <input type="range" id="slider-r" class="rgb-slider" min="0" max="255" />
+                    </p>
+                    <p class="range-field">
+                        <input type="range" id="slider-g" class="rgb-slider" min="0" max="255" />
+                    </p>
+                    <p class="range-field">
+                        <input type="range" id="slider-b" class="rgb-slider" min="0" max="255" />
+                    </p>
+                </form>
+                <!-- favourites -->
+                <div class="input-field col s12 m6">
+                    <select class="icons">
+                        <option value="" class="left">favourite 1</option>
+                        <option value="" class="left">favourite 2</option>
+                        <option value="" class="left">favourite 3</option>
+                    </select>
+                    <label class="black-text">Images in select</label>
+                </div>
+                <div class="card-action">
+                    <a href="" class="white-text"></a>
+                    <div class="switch right">
+                        <label>
+                            <input type="checkbox" checked="true">
+                            <span class="lever"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('select').formSelect();
+        });
+    </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
