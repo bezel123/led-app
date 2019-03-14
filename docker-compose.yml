@@ -1,0 +1,14 @@
+version: "3"
+services:
+  rest:
+    image: rest-app
+    container_name: rest-api
+    build:
+      context: ./backend/.
+    ports:
+      - "8000:80"
+  frontend:
+    image: nginx
+    container_name: frontend
+    volumes:
+      - "/home/max/develop/www/led-controller/src:/usr/share/nginx/html"

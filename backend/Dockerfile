@@ -6,7 +6,7 @@ ENV APP_GOPATH $GOPATH/src/github.com/pirate/app/
 
 WORKDIR $APP_GOPATH
 
-RUN go get github.com/gorilla/mux
+RUN go get github.com/gorilla/mux &&  go get github.com/gorilla/schema
 #compile app
 COPY *.go $APP_GOPATH
 RUN CGO_ENABLED=0 GOARM=7 GOOS=linux go build -a --installsuffix cgo --ldflags="-s" -o controller
