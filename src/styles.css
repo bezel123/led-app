@@ -2,4 +2,10 @@
   font-size: 24px;
   margin-right: 1em;
 }
+
+.preview-color {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Title</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#favourites-modal">Modal</a>
+
+    <!-- Modal Structure -->
+    <div id="favourites-modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <input placeholder="Name" id="name" type="text" data-error-message="Please enter a name">
+            <label for="name">Name</label>
+            <input placeholder="Color in Hex Code" id="color" type="text">
+            <label for="color"><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">Here</a>
+                you can find a
+                color picker</label>
+            <form action="#" id="rgb-form">
+                <p class="range-field">
+                    <input type="range" id="slider-r-preview" class="rgb-slider-preview" min="0" max="255" />
+                </p>
+                <p class="range-field">
+                    <input type="range" id="slider-g-preview" class="rgb-slider-preview" min="0" max="255" />
+                </p>
+                <p class="range-field">
+                    <input type="range" id="slider-b-preview" class="rgb-slider-preview" min="0" max="255" />
+                </p>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <div class="container z-depth-2 preview-color"></div>
+            <a href="#!" class="modal-close waves-effect btn red darken-3">Cancle</a>
+            <a href="#!" class="modal-close waves-effect btn indigo create">Create</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('select').formSelect();
+            $('.modal').modal();
+
+        });
+    </script>
+    <script src="./js/index.js"></script>
+    <script src="./js/favourites.js"></script>
+</body>
+
+</html>

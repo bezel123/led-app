@@ -63,17 +63,20 @@
                             <input type="range" name="slider-b" class="rgb-slider" min="0" max="255" />
                         </p>
                         <p class="range-field">
-                            <input type=text id=name name=name />
+                            <input type=text id="name" name="name" />
                         </p>
                     </form>
                     <!-- favourites -->
                     <div class="input-field col s12 m6">
-                        <select class="icons black-text">
-                            <option value="" class="left black-text">favourite 1</option>
-                            <option value="" class="left black-text">favourite 2</option>
-                            <option value="" class="left black-text">favourite 3</option>
+                        <select class="icons">
+                            <option value="" class="new-fav" disabled>
+                                <a class="waves-effect waves-light btn modal-trigger" href="#favourites-modal">Modal</a>
+                            </option>
+                            <option value="" class="left" selected>favourite 1</option>
+                            <option value="" class="left">favourite 2</option>
+                            <option value="" class="left">favourite 3</option>
                         </select>
-                        <label class=" black-text">Favourites</label>
+                        <label class="">Favourites</label>
                     </div>
                     <div class="card-action">
                         <a href="" class="black-text"></a>
@@ -88,15 +91,46 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Structure -->
+    <div id="favourites-modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <input placeholder="Name" id="name" type="text" data-error-message="Please enter a name">
+            <label for="name">Name</label>
+            <input placeholder="Color in Hex Code" id="color" type="text">
+            <label for="color"><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">Here</a>
+                you can find a
+                color picker</label>
+            <form action="#" id="rgb-form">
+                <p class="range-field">
+                    <input type="range" id="slider-r-preview" class="rgb-slider-preview" min="0" max="255" />
+                </p>
+                <p class="range-field">
+                    <input type="range" id="slider-g-preview" class="rgb-slider-preview" min="0" max="255" />
+                </p>
+                <p class="range-field">
+                    <input type="range" id="slider-b-preview" class="rgb-slider-preview" min="0" max="255" />
+                </p>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <div class="container z-depth-2 preview-color"></div>
+            <a href="#!" class="modal-close waves-effect btn red darken-3">Cancle</a>
+            <a href="#!" class="modal-close waves-effect btn indigo create">Create</a>
+        </div>
+    </div>
+
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
     <script>
         $(document).ready(function () {
             $('.sidenav').sidenav();
             $('select').formSelect();
+            $('.modal').modal();
         });
     </script>
-    <script src="./index.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/favourites.js"></script>
 </body>
 
 </html>
